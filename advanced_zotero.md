@@ -31,7 +31,7 @@ setTimeout(() => { window.bibliographyLoad("https://raw.githubusercontent.com/Li
 
 # Learning more with Zotero
 
-```ascii
+```ascii 
 
 
 
@@ -77,6 +77,7 @@ _______________\:::\____|:::|____|     |:::|    /:::/  \:::\____/:::/__\:::\   \
         \::/    /                ~~                                     \::/    /               \:|   |                  ~~                                                                  
          \/____/                                                         \/____/                 \|___|                                                                                      
                                                                                                                                                                                              
+
 
 
 
