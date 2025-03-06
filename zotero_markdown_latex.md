@@ -2,5 +2,139 @@
 title: "Utiliser Zotero avec un éditeur LaTex ou Markdown"
 subtitle: "Atelier de formation doctorale"
 date: 202050301
+bibliography: biblio/biblio.bib
+csl: csl/nature.csl
+toc: true 
 ---
+
+# Tour de table : Quels besoins 
+
+# De quoi on parle : éditeur de texte vs traitement de texte 
+
+![Markdown Everywhere !](images/markdown-everywhere.png)
+
+Word : propriétaire (contrairement à Writer de LibreOffice)
+Word et Writer sont des traitements de texte
+Un traitement de texte réalise des opérations de manière opaque pour l'usager
+il ne balise pas assez le texte (titre, sous-titre, notes, citation, références), il ne balise pas non plus assez les références
+(@vitali-rosatiChercheursSHSSaventils2018)   
+
+voir également présentation de Daphné Mathelier (@mathelierIntroductionAuLangage2022)
+
+> Utiliser Markdown \[...\] permet de revenir à des méthodes qui vont à l’essentiel en
+faisant les choses dans l’ordre – écrire, illustrer, éditer puis publier – de manière
+durable et sans perte de temps et d’énergie inutiles
+
+# Présentation du plugin betterbibtex pour Zotero 
+
+Télécharger le plugin dans Zotero
+exporter la collection en fichier .bib dans l'espace de travail de manière synchronisée 
+
+# Zotero et Markdown 
+
+Conversion du Markdown en HTML, epub, opendocument, openoffice : pandoc + citeproc  
+Conversion du Markdown en pdf : pandoc + citeproc + LaTeX (xelatex)  
+
+## conversion de base en PDF 
+
+markdown -> PDF  
+
+1.  document source   
+2.  format du document source (déduit ce format de l'extension .md, sinon `-f markdown`)  
+3.  document destination  
+4.  format du document de destination (déduit ce format de l'extension .pdf, sinon `-t pdf )  
+5.  lien avec le fichier source des références bibliographiques (*.bib)  
+6.  lien avec le fichier de présentation des références (*.csl < https://zotero/org/styles)  
+7.  lien avec le package citeproc pour l'interprétation du fichier bib   
+8.  lien avec le package xelatex (issu de TeXLive) pour la conversion en pdf   
+
+```shell
+pandoc zotero_markdown_latex.md \
+    -f markdown \
+    --bibliography=biblio/biblio.bib \
+    --csl=csl/nature.csl \
+    --citeproc \
+    --pdf-engine=xelatex \
+    -t pdf \
+    -o zotero_markdown_latex.pdf
+```
+
+## conversion en html avec une css 
+
+```shell
+pandoc zotero_markdown_latex.md \
+    -f markdown \
+    --standalone \
+    --bibliography=biblio/biblio.bib \
+    --css=style.css \
+    --csl=csl/nature.csl \
+    --citeproc \
+    --pdf-engine=xelatex \
+    -t html \
+    -o zotero_markdown_latex.html
+```
+
+## Références
+
+:::{#refs}
+:::
+
+pour une conversion en html : 
+
+```html
+<div id="refs"><div>
+```
+<div id="refs"><div>
+
+
+## Obsidian 
+
+2 plugins : 
+
+1. [Citation](https://github.com/hans/obsidian-citation-plugin) de Jon Gautier
+2. [Pandoc Reference List](https://github.com/mgmeyers/obsidian-pandoc-reference-list) de Matthew Meyers
+
+installer, activer dans Obsidian (community plugins) 
+
+### Paramétrage de Citation : 
+
+Citation Database format : bibtex  
+Citation database path : lien absolu vers le fichier .bib  
+Literature Notes Folder : nom_du_dossier  
+Literature Note Template : @{{citekey}}  
+Literature Note Content Template :   
+
+```yaml
+title: "{{title}}"
+author: {{authorString}}
+year: {{year}}
+publisher: {{publisher}}
+publication: {{containerTitle}}
+url: {{URL}}
+note: {{note}}
+doi: {{doi}}
+tags: [ref]
+```
+### Paramétrage de Pandoc Reference List  
+
+Fallback Path To pandoc : lien absolu vers Pandoc (Linux : ```$ whereis pandoc``` , pour Windows : ```C:\> where.exe pandoc.exe```)
+Path to bibliography file : Lien absolu vers le fichier .bib (même lien que pour Citation)
+Pull bibliography from Zotero : on  
+zotero port : 23119  
+
+
+
+
+## autre éditeur 
+
+# Zotero et LaTeX 
+
+## éditeur LaTeX en ligne 
+
+- Overleaf
+- Stylo 
+
+## éditeur LaTeX en local 
+
+### présentation de Pandoc 
 
