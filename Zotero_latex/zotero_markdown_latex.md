@@ -99,7 +99,7 @@ pour une conversion en html :
 <div id="refs"><div>
 
 
-## Obsidian 
+# Zotero et Obsidian
 
 2 plugins : 
 
