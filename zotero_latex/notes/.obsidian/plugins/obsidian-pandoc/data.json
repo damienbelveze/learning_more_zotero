@@ -1,0 +1,15 @@
+{
+  "showCLICommands": true,
+  "addExtensionsToInternalLinks": "html",
+  "injectAppCSS": "light",
+  "injectThemeCSS": false,
+  "customCSSFile": "style.css",
+  "displayYAMLFrontmatter": false,
+  "linkStrippingBehaviour": "text",
+  "highDPIDiagrams": true,
+  "pandoc": "/user/bin/pandoc",
+  "pdflatex": "/user/bin/pdflatex",
+  "outputFolder": "",
+  "extraArguments": "--metadata bibliography=/biblio/biblio.bib\n--citeproc",
+  "exportFrom": "md"
+}
