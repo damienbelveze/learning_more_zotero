@@ -2,7 +2,7 @@ Cours sur les fonctionnalités avancées de Zotero :
 
 # Utiliser Zotero avec un éditeur de texte (markdown, LaTeX)
 
-[Accès au cours](Zotero_latex/zotero_markdown_latex.md)
+[Accès au cours](https://damienbelveze.github.io/learning_more_zotero/zotero_latex/zotero_markdown_latex.html)
 
 
 
