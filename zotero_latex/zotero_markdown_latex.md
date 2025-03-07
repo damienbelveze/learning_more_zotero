@@ -1,5 +1,5 @@
 ---
-title: "Utiliser Zotero avec un éditeur \LaTeX\  ou Markdown"
+title: Utiliser Zotero avec un éditeur $\LaTeX ou Markdown
 subtitle: "Atelier de formation doctorale"
 date: 202050301
 bibliography: biblio/biblio.bib
@@ -63,7 +63,7 @@ pandoc zotero_markdown_latex.md \
     -o zotero_markdown_latex.pdf
 ```
 
-## conversion du markdown en LaTeX 
+## conversion du markdown en $\LaTeX 
 
 ```shell
 pandoc zotero_markdown_latex.md \
@@ -210,9 +210,9 @@ copier le code suivant :
 
 
 
-## éditeur \LaTeX\  en ligne 
+## éditeur $\LaTeX  en ligne 
 
-- Overleaf : éditeur \LaTeX\ [en ligne](https://www.overleaf.com/)
+- Overleaf : éditeur $\LaTeX [en ligne](https://www.overleaf.com/)
 
 Création de compte gratuite. Pas d'abonnement communautaire à l'Université de Rennes, pas de possibilité de synchroniser avec Zotero  
 Le fichier bib qui est uploadé doit être complet ou bien uploadé plusieurs fois.   
@@ -221,9 +221,9 @@ Le fichier bib qui est uploadé doit être complet ou bien uploadé plusieurs fo
 
 Stylo a été créé par Marcelo Vitali-Rosati pour mettre en oeuvre ses principes d'écriture pour les SHS 
 Disponible sur la plateforme Humanum. 
-Intègre Pandoc et \LaTeX\  
+Intègre Pandoc et $\LaTeX  
 
-## éditeur \LaTeX\ en local 
+## éditeur $\LaTeX en local 
 
 TeXStudio ou TeXmaker  
 
@@ -239,7 +239,7 @@ puis dans Options remplacer bibtex par biber :
 
 Configurer les commandes d'utilisateur pour remplacer la commande bibtex par biber   
 (cela nécessite que le package biber soit appelé dans l'entête du document)  
-puis dans le processus de compilation, choisir LaTeX + BibLaTex + LaTeX(x2) + dvips + ps2pdf + see pdf  
+puis dans le processus de compilation, choisir $\LaTeX + BibLaTex + $\LaTeX(x2) + dvips + ps2pdf + see pdf  
 
 (options > configure texmaker > Quick build)  
 

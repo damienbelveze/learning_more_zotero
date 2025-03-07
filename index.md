@@ -6,8 +6,10 @@ Cours sur les fonctionnalités avancées de Zotero :
 
 
 
-
 # Fonctions avancées de Zotero
 
- [Accès au cours](https://liascript.github.io/course/?https://raw.githubusercontent.com/damienbelveze/learning_more_zotero/main/advanced_zotero.md#1)
+ [Accès au cours](https://liascript.github.io/course/?https://raw.githubusercontent.com/damienbelveze/learning_more_zotero/main/advanced_zotero/advanced_zotero.md#1)
+
+
+ 
 
