@@ -1,5 +1,5 @@
 ---
-title: "Utiliser Zotero avec un éditeur LaTex ou Markdown"
+title: "Utiliser Zotero avec un éditeur \LaTeX\  ou Markdown"
 subtitle: "Atelier de formation doctorale"
 date: 202050301
 bibliography: biblio/biblio.bib
@@ -33,9 +33,13 @@ exporter la collection en fichier .bib dans l'espace de travail de manière sync
 # Zotero et Markdown 
 
 Conversion du Markdown en HTML, epub, opendocument, openoffice : pandoc + citeproc  
-Conversion du Markdown en pdf : pandoc + citeproc + LaTeX (xelatex)  
+Conversion du Markdown en pdf : pandoc + citeproc + \LaTeX\  (xelatex)  
 
 ## conversion de base en PDF 
+
+Pandoc : convertisseur universel de fichiers développé par John MacFarlane en Haskell et distribué sous une licence GPL 
+universel mais avec une limite importante : on ne peut pas convertir un pdf en document inscriptible.
+Pas d'interface graphique, cet outil s'utilise en lignes de commande depuis un terminal ou bien peut être intégré à des applications (fichiers d'intégration continue, version pour Python : pypandoc, intégré à R, à Stylo, etc.)
 
 markdown -> PDF  
 
@@ -113,7 +117,7 @@ installer, activer dans Obsidian (community plugins)
 Citation Database format : bibtex  
 Citation database path : lien absolu vers le fichier .bib  
 Literature Notes Folder : nom_du_dossier  
-Literature Note Template : @{{citekey}}  
+Literature Note Template : \@{{citekey}}  
 Literature Note Content Template :   
 
 ```yaml
@@ -206,12 +210,43 @@ copier le code suivant :
 
 
 
-## éditeur LaTeX en ligne 
+## éditeur \LaTeX\  en ligne 
 
-- Overleaf
-- Stylo 
+- Overleaf : éditeur \LaTeX\ [en ligne](https://www.overleaf.com/)
 
-## éditeur LaTeX en local 
+Création de compte gratuite. Pas d'abonnement communautaire à l'Université de Rennes, pas de possibilité de synchroniser avec Zotero  
+Le fichier bib qui est uploadé doit être complet ou bien uploadé plusieurs fois.   
 
-### présentation de Pandoc 
+- Stylo : accès via la création d'un compte Humanum  
+
+Stylo a été créé par Marcelo Vitali-Rosati pour mettre en oeuvre ses principes d'écriture pour les SHS 
+Disponible sur la plateforme Humanum. 
+Intègre Pandoc et \LaTeX\  
+
+## éditeur \LaTeX\ en local 
+
+TeXStudio ou TeXmaker  
+
+Exemple avec TeXmaker  : comment configurer TexMaker pour utiliser biber afin de générer la bibliographie ?
+
+Utiliser biber à la place de bib(La)Tex pour gérer les références  
+
+(user > user commands > edit user commands)  
+
+puis dans Options remplacer bibtex par biber :  
+
+(options> Configure TeXmaker > commands) ; entrer dans le champ 'Bib(la)tex' = «/bin/biber» % (vérifier que biber est bien dans le dossier /bin )   
+
+Configurer les commandes d'utilisateur pour remplacer la commande bibtex par biber   
+(cela nécessite que le package biber soit appelé dans l'entête du document)  
+puis dans le processus de compilation, choisir LaTeX + BibLaTex + LaTeX(x2) + dvips + ps2pdf + see pdf  
+
+(options > configure texmaker > Quick build)  
+
+![](images/texmaker.png)  
+
+
+
+
+
 
