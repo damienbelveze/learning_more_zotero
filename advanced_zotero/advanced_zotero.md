@@ -84,19 +84,104 @@ _______________\:::\____|:::|____|     |:::|    /:::/  \:::\____/:::/__\:::\   \
 
 ```
 
-# How to deal with the storage limitation of Zotero cloud
+Throughout this lesson, activities and demos will be led from the Zotero collection <a href="advanced_zotero.bib" download>"advanced Zotero"</a> that might download and import in your own Zotero library.
+
+# 1. How to deal with the storage limitation of Zotero cloud
+## 1.1 How to load a plugin in Zotero
 
 
 
-# How to use Optical Character Recognition within Zotero dashboard
+- Download the latest release (.xpi file) from:  
+        * Latest Stable  
+        * All Releases  
+- Note: If you're using Firefox as your browser, right click the xpi and select "Save As.."  
+- In Zotero click "Tools" in the top menu bar and then click "Addons"  
+- Go to the Extensions page and then click the gear icon in the top right.  
+- Select Install Add-on from file.  
+- Browse to where you downloaded the .xpi file and select it.  
+- Restart Zotero, by clicking "restart now" in the extensions list where the plugin is now listed.  
 
-## What can you do with this plugin
+## 1.2 Let's install our (maybe) first plugin in Zotero
+
+![](images/attanger.png)
+
+load the [attanger plugin](https://github.com/MuiseDestiny/zotero-attanger) into Zotero extension manager. 
+If needed, restart Zotero. 
+Send a copy to a third party (OneDrive, Nextcloud, etc.) rather than to 300MB limited storage on Zotero servers. 
+
+Edit > Settings > attanger
+
+- Source path : keep current source path (usr/Zotero/storage)
+- Attach type : link 
+- Destination path : path to the third-party location storage 
+
+
+
+# 2. How to automaticaly add tags linked to specific actions 
+
+![](images/actions_tags.png)
+
+load the [Action & Tag plugin](https://video.univ-rennes1.fr/permalink/v1268af4fca2dp7avzaf/iframe/)
+
+load the [attanger plugin](https://github.com/MuiseDestiny/zotero-attanger) into Zotero extension manager. 
+If needed, restart Zotero. 
+
+Edit > Settings > Actions & Tags
+
+![](images/actions_tags_menu.png)
+
+In this example, we set two rules : 
+
+- the first one automaticaly adds a "/unread" tag when an item is created in the Zotero library
+- the second one is triggered by a shortcut (Shift+R) and execute for the selected item(s) a script that removes the "/unread" tag and replaces it by a "reading" tag
+This script was founded here  
+
+**exercise : how to add the emoji "note" (🗒️) whenever a note is appended to an item ?**
+
+# 3. how to polish your references with Java Scripts and Linter plugin
+
+# 3.1 Linter
+
+Linter was designed to apply slight formal corrections to Libraty items
+
+- Title case -> Sentence Case 
+- normal case -> capitalized, bold, italics, sub/superscripts  
+- whatever date format -> ISO 8601 (YYYY-MM-DDT)  
+- put the language in the right form (*en* instead of "english", "English", eng, Eng, etc.)
+- remove https://doi.org/ before the DOI in the DOI field
+
+
+
+![](images/linter.png)
+
+| function | default shortcut | HTML equivalent | activity |
+|:---|:---|:---|:---|
+| Supscript | Ctrl + Shift + + | \<sup>word\<sup> |supscript tm in LegoTM [in this reference's title](http://www.cccg.umontreal.ca/pdf/social%20investment%20jane%20jenson.pdf) |
+| Subscript | Ctrl + = | \<sub>word\</sub> | Subscript 2 in [this reference's title](10.3357/asem.2481.2009) |
+| Bold: Ctrl + B | \<b>word\</b> |     |
+| Italic | Ctrl + I | \<i>word\</i> | in the [following reference's title](https://pmc.ncbi.nlm.nih.gov/articles/PMC3518271/) put Salvia Hispanica in italics |
+| No case | Ctrl + N | Setting class="nocase" | decapitalize Bell Hooks in the [title of this reference](https://youtu.be/u60jNSV1NSk?feature=shared) |
+
+
+# 3.2 Run scripts through Zotero to execute bulk actions 
+
+Add / remove / replace tags with Thalient-ai Java scripts 
+
+1. Select items in a collection (or open a collection to run the script on all the items it contains)
+2. Tools > developers > copy and paste the [script that can be found on Thalient-ai github repository](https://github.com/thalient-ai/zotero-scripts/blob/main/zotero-batch-tag/src/zotero_batch_tag.js)
+3. Run the code 
+4. Follow the instructions
+
+
+# 4. How to use Optical Character Recognition within Zotero dashboard
+
+## 4.1 What can you do with this plugin
 
 By Ocerization, we mean the operation of using optical character recognition to index and make searchable the content of a PDF which was previously scanned as an image formated as a PDF 
 Thanks to Zotero-ocr plugin (adapted to Zotero 7), it's possible to ocerize PDF provided they have a parent item. 
 This plugin is usefull for researchers who need to work on photographs of printed material. 
 
-## How does it work
+## 4.2 How does it work
 
 This plugin needs some packages to be installed in order to be run through Zotero. 
 The needed packages are **Tesseract-ocr** and **Poppler-Utils** 
@@ -122,7 +207,7 @@ Once you have installed this plugin, you will be able to open its settings (edit
 By default, the paths to tesseract & pdftoppm (a package of poppler-utils) are empty. 
 If you leave these fields empty, it may work, but if it does not work, you will have to provide the paths to these utilities. 
 
-In order to locate these packages, you may use the *whereis* command for GNU/Linux systems:
+In order to locate these packages, you may use the ```$ whereis <package>``` command for GNU/Linux systems (homolog to ```$ where <package>``` command for Windows):
 
 <img src="images/whereis.png" alt="two command lines on a terminal to locate tesseract-ocr and pdftoppm, the output gives the paths to these utilities that you need to provide to Zotero : on this installation, these paths are /usr/share/tesseract-ocr and /usr/bin/pdftoppm">command lines to locate tesseract-ocr and pdftoppm packages</img>
 
@@ -154,3 +239,10 @@ Then, let's assume the pdf is filled with french language, you will need to prov
 In the field "choose a language/script for recognition", add *fra* (or *spa* if the text was written in spanish)
 
 Zotero-ocr should ocerize and index the content of your PDF and give you the output you have choosed to get (see above)
+
+You may try with the following documents that where *scanned in image mode*
+
+- <a href="./zotero_ocr/ocr_french.pdf" download>document in French</a>
+- <a href="./zotero_ocr/pdf_ocr.pdf" download>document in English</a>
+
+
