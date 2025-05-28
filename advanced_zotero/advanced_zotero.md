@@ -84,6 +84,8 @@ _______________\:::\____|:::|____|     |:::|    /:::/  \:::\____/:::/__\:::\   \
 
 ```
 
+For basic use of Zotero see [First steps with Zotero](https://liascript.github.io/course/?https://raw.githubusercontent.com/damienbelveze/first_steps_zotero/main/first_steps_zotero.md#1)
+
 Throughout this lesson, activities and demos will be led from the Zotero collection <a href="advanced_zotero.bib" download>"advanced Zotero"</a> that might download and import in your own Zotero library.
 
 # 1. How to deal with the storage limitation of Zotero cloud
