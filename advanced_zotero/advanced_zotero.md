@@ -89,9 +89,18 @@ For basic use of Zotero see [First steps with Zotero](https://liascript.github.i
 Throughout this lesson, activities and demos will be led from the Zotero collection <a href="advanced_zotero.bib" download>"advanced Zotero"</a> that might download and import in your own Zotero library.
 
 # 1. How to deal with the storage limitation of Zotero cloud
+
+Each free account is limited to 300 MB storage on Zotero servers. The payment of extra-storage makes it possible for Zotero developers to provide the software itself free (like in "free beer") for all, but it's still a limit that can be bypassed. 
+In 6th version, you might have used the Zotfile plugin to save your references and PDFs in a third-party server (Dropbox, OneDrive, Nextcloud). Zotfile has not been rewritten for the 7th version, but you may replace it with the Attanger plugin. 
+
+However hosting group libraries remains a problem, since the storage group remains attached to the space dedicated to his/her creator. 
+If they run out of space, moving references and PDFs to a third-party server won't be an alternative, because other members won't be able to access the underlying sqlite database which remains local on the group's manager computer. 
+
+There are paying alternatives (Zotero monetizes hosting plans (unlimited storage for university's users and groups) with universities), but as a library we need to make choices, and we coud not afford so far to pay for such an agreement.
+
 ## 1.1 How to load a plugin in Zotero
 
-
+anytime we need to add a plugin into Zotero, we follow the same process:
 
 - Download the latest release (.xpi file) from:  
         * Latest Stable  
@@ -119,7 +128,7 @@ Edit > Settings > attanger
 
 
 
-# 2. How to automaticaly add tags linked to specific actions 
+# 2. How to automatically add tags linked to specific actions 
 
 ![](images/actions_tags.png)
 
@@ -142,6 +151,18 @@ This script was founded here
 
 # 3. how to polish your references with Java Scripts and Linter plugin
 
+*To lint* is commonly used for clothes and means "to use a gadget for getting rid of fibres"
+
+![](images/lint.jpg)
+
+applied to references, this means reduce the heterogeneity of values collected in the various fields of a set of references.
+This will make easier to process bibliographic data in third-party software, like visualization tools. 
+
+These tasks may be achieved through the Linter plugin or through adhoc scripts shared by the community of users.
+
+we will browser both types of resources.
+
+
 # 3.1 Linter
 
 Linter was designed to apply slight formal corrections to Libraty items
@@ -152,6 +173,10 @@ Linter was designed to apply slight formal corrections to Libraty items
 - put the language in the right form (*en* instead of "english", "English", eng, Eng, etc.)
 - remove https://doi.org/ before the DOI in the DOI field
 
+If you want to visualize your references in a timeline, you will need to manage uniform date format. 
+The most used is ISO 8601 
+
+![](images/date_format.PNG)
 
 
 ![](images/linter.png)
@@ -177,9 +202,18 @@ Add / remove / replace tags with Thalient-ai Java scripts
 
 # 4. How to use Optical Character Recognition within Zotero dashboard
 
+In digital humanities, it can be usefull to make to things at the same time : 
+
+- manage references with attached PDF which are scan outputs
+- making these PDF searchable within Zotero (which is not possible if the documents were scanned as images which is more often the case)
+
+We can solve the problem within Zotero if we are able to : 
+- install an OCR tool on our computer 
+- use it within Zotero to ocerize PDF files from scans 
+
 ## 4.1 What can you do with this plugin
 
-By Ocerization, we mean the operation of using optical character recognition to index and make searchable the content of a PDF which was previously scanned as an image formated as a PDF 
+By Ocerization, we mean the **operation of using Optical Character Recognition** to index and make searchable the content of a PDF which was previously scanned as an image formated as a PDF 
 Thanks to Zotero-ocr plugin (adapted to Zotero 7), it's possible to ocerize PDF provided they have a parent item. 
 This plugin is usefull for researchers who need to work on photographs of printed material. 
 
