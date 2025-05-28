@@ -190,9 +190,10 @@ The most used is ISO 8601
 | Italic | Ctrl + I | \<i>word\</i> | in the [following reference's title](https://pmc.ncbi.nlm.nih.gov/articles/PMC3518271/) put Salvia Hispanica in italics |
 | No case | Ctrl + N | Setting class="nocase" | decapitalize Bell Hooks in the [title of this reference](https://youtu.be/u60jNSV1NSk?feature=shared) |
 
-```txt
-you can try this on the references contained in <a href="advanced_zotero.bib" download>our zotero collection</a> : 
 
+You can try this on the references contained in <a href="advanced_zotero.bib" download>our zotero collection</a> : 
+
+```txt
 - Import the bib file into your Zotero library
 - apply to each reference the action recorded in its child note
 ```
