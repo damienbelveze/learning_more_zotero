@@ -165,6 +165,8 @@ we will browser both types of resources.
 
 # 3.1 Linter
 
+![](images/linter.png)
+
 Linter was designed to apply slight formal corrections to Libraty items
 
 - Title case -> Sentence Case 
@@ -179,7 +181,6 @@ The most used is ISO 8601
 ![](images/date_format.PNG)
 
 
-![](images/linter.png)
 
 | function | default shortcut | HTML equivalent | activity |
 |:---|:---|:---|:---|
@@ -188,6 +189,13 @@ The most used is ISO 8601
 | Bold: Ctrl + B | \<b>word\</b> |     |
 | Italic | Ctrl + I | \<i>word\</i> | in the [following reference's title](https://pmc.ncbi.nlm.nih.gov/articles/PMC3518271/) put Salvia Hispanica in italics |
 | No case | Ctrl + N | Setting class="nocase" | decapitalize Bell Hooks in the [title of this reference](https://youtu.be/u60jNSV1NSk?feature=shared) |
+
+```txt
+you can try this on the references contained in <a href="advanced_zotero.bib" download>our zotero collection</a> : 
+
+- Import the bib file into your Zotero library
+- apply to each reference the action recorded in its child note
+```
 
 
 # 3.2 Run scripts through Zotero to execute bulk actions 
