@@ -163,7 +163,7 @@ These tasks may be achieved through the Linter plugin or through adhoc scripts s
 we will browser both types of resources.
 
 
-# 3.1 Linter
+## 3.1 Linter
 
 ![](images/linter.png)
 
@@ -198,7 +198,7 @@ you can try this on the references contained in <a href="advanced_zotero.bib" do
 ```
 
 
-# 3.2 Run scripts through Zotero to execute bulk actions 
+## 3.2 Run scripts through Zotero to execute bulk actions 
 
 Add / remove / replace tags with Thalient-ai Java scripts 
 
@@ -273,7 +273,7 @@ other files may have been added such as html files filled with the text containe
 
 Be carefull : if your text is not written in English, two steps should be added to get the same results. 
 
-You will need to install extra packages from [Tessdata repostiry](https://github.com/tesseract-ocr/tessdata)
+You will need to install extra packages from [Tessdata repository](https://github.com/tesseract-ocr/tessdata)
 For instance, if you need to ocerize French texts, you will need to download in your tessdata folder the following package: *fra.traineddata* ; for spanish texts, you will need *spa.traineddata* file, and so on...
 
 Tessdata folder can be found under tesseract-ocr (see above). 
