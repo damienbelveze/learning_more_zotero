@@ -246,3 +246,21 @@ You may try with the following documents that where *scanned in image mode*
 - <a href="./zotero_ocr/pdf_ocr.pdf" download>document in English</a>
 
 
+# 5. How to manage duplicates
+
+![](images/zoplicate.png)
+
+By default, with [Zoplicate plugin](https://github.com/ChenglongMa/zoplicate) installed on Zotero, duplicates can be merged within the section "duplicates" below your collections.
+It detects duplicates as soon as references are collected in yout library.
+
+The following options can be chosen by the user : 
+
+- Keep New: Set the new item as the master item and merge the duplicates.  
+- Keep Old: Set the existing item as the master item and merge the duplicates.  
+- Keep All: Keep both the new item and the existing item.  
+- Merge Manually: Go to the Duplicate Items Panel and merge the duplicate item manually.  
+
+Makes it possible in the duplicate section to qualify "non duplicates"
+Makes it possible in the same place to bulk merge all duplicates (use it with caution)
+
+
